@@ -8,6 +8,8 @@
 <title>장바구니</title>
 <link href="/css/theme.css" rel="stylesheet" type="text/css">
 <style>
+
+
 	* {
 	    margin: 0;
 	    padding: 0;
@@ -16,6 +18,7 @@
 	
 	section {
 	    margin: 20px;
+	    
 	}
 	
 	section > div > ul {
@@ -62,6 +65,27 @@
 	section > div > button:hover {
 	    background-color: black;
 	}
+	button.doOrder {
+	   padding: 13px 30px;
+	   background-color: rgb(233, 213, 189);
+	   color: #ffffff;
+	   border: none;
+	   border-radius: 4px;
+	   cursor: pointer;
+	   font-family: 'YeongdeokSea';
+	   margin-right: 10px;
+	   width: 150px;
+	}
+
+	button.doOrder:hover {
+    	background-color: peru;
+    	width: 150px; 
+	}
+	form button {
+    	margin-top: 10px; /* 버튼 위에 10px의 공간을 추가합니다. */
+	}
+	
+
 	  
 </style>
 
@@ -101,7 +125,7 @@
            <tr >
                <td rowspan="2"><input type="checkbox" name="cart" class="updateCart" value="${item.cart_id}" checked="on"></td>
                <td rowspan="2">
-                   <img src="/img/${item.img1}" alt="magic keyboard">
+                   <img src="/img/coffee/${item.img1}" alt="magic keyboard">
                </td>
                <td>
                    <p>${item.title}</p>
@@ -122,13 +146,13 @@
      </table>
      <input id="sum" style="border:none">
         <div>
-            <button id=btn_shopping>쇼핑 계속하기</button>
-            <button id=btn_select_delete>선택상품삭제</button>
-            <button id=btn_delete>전체삭제</button>  
+            <button id=btn_shopping class=doOrder>쇼핑 계속하기</button>
+            <button id=btn_select_delete class=doOrder>선택상품삭제</button>
+            <button id=btn_delete class=doOrder>전체삭제</button>  
 			<form method='get' action="/order" id="cartToOrder">
 				<input type="hidden" style="display=none;" name="sendOrder" id="sendOrder">
-				<button id=btn_select_order>선택상품주문</button>
-				<button id=btn_order>전체상품주문</button>
+				<button id=btn_select_order class=doOrder >선택상품주문</button>
+				<button id=btn_order class=doOrder>전체상품주문</button>
 			</form>
         </div>
     </section>

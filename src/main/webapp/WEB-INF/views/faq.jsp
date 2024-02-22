@@ -9,79 +9,23 @@
 <link href="/css/theme.css" rel="stylesheet" type="text/css">
 
 <style>
-	main {
-	  margin: 20px;
-	}	
-	.middle_top_title {
-	  font-size: 24px;
-	  color: #333;
-	}	
-	.middle_top_hr {
-	  border: 1px solid #333;
-	  margin-bottom: 20px;
-	}	
-	.announcement {
-	  margin-bottom: 10px;
-	  padding: 10px;
-	  background-color: #f9f9f9;
-	  border: 1px solid #ccc;
-	}	
-	#data_write {
-	  display: none;
-	}	
-	button {
-	  padding: 10px 20px;
-	  background-color: #333;
-	  color: white;
-	  border: none;
-	  cursor: pointer;
-	  margin-right: 10px;
-	}
-	button:hover {
-	  background-color: #555;
-	}
-	.announcement label {
-	    display: block;
-	    font-weight: bold;
-	    margin-bottom: 5px;
-	}
-	.announcement input[type="text"],
-	.announcement textarea {
-	    width: 100%;
-	    padding: 10px;
-	    margin-bottom: 15px;
-	    border: 1px solid #ccc;
-	    border-radius: 4px;
-	    box-sizing: border-box;
-	}	
-	.announcement textarea {
-	    min-height: 150px;
-	    resize: vertical;
-	}	
-	.announcement button {
-	    background-color: black;
-	    color: #fff;
-	    border: none;
-	    border-radius: 4px;
-	    padding: 10px 20px;
-	    cursor: pointer;
-	    font-size: 16px;
-	}	
-	.announcement button:hover {
-	    background-color: #0056b3;
-	}
-		.announcement {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 10px;
-  padding: 10px;
-  border: 1px solid #ccc;
+	<style>
+.middle_top_hr {
+  margin-bottom: 20px;
 }
 
-/* Adjust spacing between different parts */
-.announcement span {
-  margin-right: 60px; /* Increase the margin for more space */
+#data_write{
+  display: none;
 }
+
+.announcement { 
+  margin-bottom: 10px;
+}
+
+.announcement span {
+  margin-right: 60px; 
+}
+</style>
 </style>
 </head>
 
@@ -150,10 +94,6 @@ $(document)
 })
 
 .on('click','#data_list',function(){
-	//let ndx = $(this).index();
-	//console.log('ndx='+ndx)
-	//$('#data_write:eq(' + ndx + ')').toggle(300);
-	//$(this).find('div#data_write').toggle(300);
 	$(this).next().toggle(300);
 	
 })   
@@ -163,9 +103,10 @@ $(document)
 
 .on('click','#btnbDelete',function(){
 	let id=$(this).parent().find('input#uniq').val();
+	let category=$(this).parent().find('input#category').val();
 	$.ajax({
 		type:'post', url:'/boardDelete',
-		data:{uniq:id},
+		data:{uniq:id,category:category},
 		dataType:'text',
 		success:function(data){
 			if(data==1){
@@ -178,12 +119,14 @@ $(document)
 	})	
 })
 .on('click','#btnbModify',function(){
-	let id=$(this).parent().find('input#uniq').val();
-	let content=$(this).parent().find('textarea#content').val();
 	let title=$(this).parent().find('input#title').val();
+	let content=$(this).parent().find('textarea#content').val();
+	let id=$(this).parent().find('input#uniq').val();
+	let category=$(this).parent().find('input#category').val();
+	
 	$.ajax({
 		type:'post', url:'/boardModify',
-		data:{title:title,content:content,uniq:id},//$('#uniq').val()}, 
+		data:{title:title,content:content,uniq:id,category:category},//$('#uniq').val()}, 
 		dataType:'text',
 		success:function(data){
 			if(data==1){

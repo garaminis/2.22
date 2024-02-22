@@ -8,58 +8,32 @@
 <script src='http://code.jquery.com/jquery-latest.js'></script>
 </head>
 <link href="/css/theme.css" rel="stylesheet" type="text/css">
-<style>
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-    margin: 0;
-    padding: 0;
-}
 
-h1 {
-    text-align: center;
-    margin-top: 50px;
-}
+<style>
 
 table {
     margin: 0 auto;
-    border-collapse: collapse;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
-}
+    border-collapse: colapse;
+} 
 
 table tr td {
     padding: 10px;
+    font-family: 'YeongdeokSea';
 }
 
-input[type="text"],
-input[type="password"] {
+
+input {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border: 1px solid #ddb48e;
+    border-radius: 5px;
     box-sizing: border-box;
 }
-
-button {
-    padding: 13px 30px; /* Increased button size */
-    background-color: rgb(39, 39, 151); /* Changed button color to navy */
-    color: #ffffff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 100%;
-}
-
-button:hover {
-    background-color: #305be7;
-}
-
-#signup {
-    margin-top: 10px; /* Add space between login and signup buttons */
+button{
+ 	  width: 100%;
 }
 </style>
+
 <body>
 <div id="container">
   <header id="herder">
@@ -71,21 +45,23 @@ button:hover {
   </nav>
   
   <main id="main">
-    <div id="mainContent">     
+    <div id="mainContent">   
+     <h1><br>로그인</h1><br>  
+        <hr> 
 			<table id=tblLogin>
-  		  <tr>
-	        <td> Login ID </td>
-	        <td><input type="text" id="loginId">  </td>
-        </tr>
-        <tr>
-			    <td> Password </td>
-			    <td><input type="password" id="password" ></td>
+  		   <tr>
+	          <td> Login ID </td>
+	          <td><input id="loginId"></td> 
+           </tr>
+           <tr>
+			  <td> Password </td>
+			  <td><input type="password" id="password" ></td>
 		    </tr>
 		    <tr style="color: red; display: none;" id='error'>
 		    	<td colspan="2">아이디 또는 비밀번호를 잘못 입력했습니다.<br>입력하신 내용을 다시 확인해주세요.</td>
 		    </tr>
 		    <tr>
-			  	<td ><a href="">비밀번호찾기</a></td>
+			  	<td ></td> <!--비밀번호 찾기 부분-->
 		    </tr>
 		    <tr>
 		      <td colspan="2"> <button id=btnLogin >로그인</button></td>
@@ -103,7 +79,7 @@ button:hover {
 </div>
 </body>
 
-
+<script src='http://code.jquery.com/jquery-latest.js'></script>
 <script>
 $(document)
 .ready(function(){
@@ -123,7 +99,7 @@ $(document)
 				alert("관리자로그인 성공");
 				$('#loginId,#password').val('');
 				location.href="/";
-			}else{
+			} else{
 				$('#error').show();
 				$('#loginId,#password').val('');
 				$('#loginId').focus();
@@ -136,6 +112,7 @@ $(document)
 .on('click','#btnSignup',function(){
 	location.href="/signup";
 }) 
+
 
 </script>
 </html>

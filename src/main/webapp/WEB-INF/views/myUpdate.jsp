@@ -9,17 +9,6 @@
 <script src='http://code.jquery.com/jquery-latest.js'></script>
 </head>
 <style>
-
-h1 {
-    text-align: center;
-} 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-    margin: 0;
-    padding: 0;
-}
-
 table {
     margin: 20px auto;
     border-collapse: collapse;
@@ -46,24 +35,10 @@ input[type="email"] {
     border-radius: 4px;
     box-sizing: border-box;
 }
-
-button {
-    padding: 10px 10px;
-    background-color: navy;
-    color: #fff;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    width: 100%;
+.btnmyupdate{
+	 width: 100%;
 }
 
-button:hover {
-    background-color: #0056b3;
-}
-
-#signup:hover {
-    background-color: #004080;
-}
 </style>
 <body>
 <div id="container">
@@ -105,10 +80,10 @@ button:hover {
 			    <td colspan="2"><input type="email" id="mail" placeholder="이메일"></td>
 			  </tr>
 			  <tr>
-			    <td colspan="2"><button id="btnupdate">수정완료</button></td>
+			    <td colspan="2"><button id="btnupdate" class='btnmyupdate'>수정완료</button></td>
 			  </tr>
 	      <tr>
-		      <td colspan="2"><button id="btnclear" >취소</button></td>
+		      <td colspan="2"><button id="btnclear" class='btnmyupdate'>취소</button></td>
 			  </tr>
 			</table>
 		</div>

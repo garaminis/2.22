@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link href="/css/admin.css" rel="stylesheet" type="text/css">
 </head>
 <style>
 
@@ -20,7 +21,7 @@
 	        <a href="/admin" class="categoryMenu">상품관리</a>
 	        <a href="/adminorder" class="categoryMenu">주문관리</a>
 	        <a href="memberList" class="categoryMenu">고객관리</a>
-	        <a href="/계시판관리" class="categoryMenu">계시판관리</a>
+	        <a href="/게시판관리" class="categoryMenu">게시판관리</a>
 	        <a href="/통계분석" class="categoryMenu">통계분석</a>
 	        <button id="doSerch" onclick="location.href='/'">메인페이지</button>
 	    </span>

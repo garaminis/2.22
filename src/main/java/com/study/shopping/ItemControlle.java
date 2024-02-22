@@ -34,7 +34,7 @@ public class ItemControlle {
 		System.out.println(id);
 		int pageStart = 0;
 		int pageEnd = 16;
-		ArrayList<GoodsDTO> item = gdao.itemList(Integer.parseInt(id), pageStart, pageEnd);
+		ArrayList<GoodsDTO> item = gdao.itemList(Integer.parseInt(id));
 		System.out.println(item);
 	    model.addAttribute("itemList", item);
 	    return "/itemView";

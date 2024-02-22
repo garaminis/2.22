@@ -56,13 +56,13 @@ table {
     <div id="mainContent">
       <div style="margin-top: 20px; text-align: center; ">
         <div class="img-box" style="display: inline-block;">
-          <img class="M_img"style="width: 280px;" src="/img/${itemInfo[0].img1}" alt=""><br>
+          <img class="M_img"style="width: 280px;" src="/img/coffee/${itemInfo[0].img1}" alt=""><br>
           <div>
-            <img class="S_img1" onmouseover="onIMG();" onmouseout="offIMG();"style="width: 40px;" src="/img/${itemInfo[0].img1}" alt="">
-            <img class="S_img2" onmouseover="onIMG();" onmouseout="offIMG();"style="width: 40px;" src="/img/${itemInfo[0].img1}" alt="">
-            <img class="S_img3" onmouseover="onIMG();" onmouseout="offIMG();"style="width: 40px;" src="/img/${itemInfo[0].img1}" alt="">
-            <img class="S_img4" onmouseover="onIMG();" onmouseout="offIMG();"style="width: 40px;" src="/img/${itemInfo[0].img1}" alt="">
-            <img class="S_img5" onmouseover="onIMG();" onmouseout="offIMG();"style="width: 40px;" src="/img/${itemInfo[0].img1}" alt="">
+            <img class="S_img1" onmouseover="onIMG();" onmouseout="offIMG();"style="width: 40px;" src="/img/coffee/${itemInfo[0].img1}" alt="">
+            <img class="S_img2" onmouseover="onIMG();" onmouseout="offIMG();"style="width: 40px;" src="/img/coffee/${itemInfo[0].img2}" alt="">
+            <img class="S_img3" onmouseover="onIMG();" onmouseout="offIMG();"style="width: 40px;" src="/img/coffee/${itemInfo[0].img3}" alt="">
+            <img class="S_img4" onmouseover="onIMG();" onmouseout="offIMG();"style="width: 40px;" src="/img/coffee/${itemInfo[0].img4}" alt="">
+            <img class="S_img5" onmouseover="onIMG();" onmouseout="offIMG();"style="width: 40px;" src="/img/coffee/${itemInfo[0].img5}" alt="">
           </div>
         </div>
         <form method='get' action="/order" id="goOrder">

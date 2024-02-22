@@ -7,7 +7,7 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface GoodsDAO {
 	int goodsAdd(int Category_id, String title, int price,int discnt, int stock, String img, String content,int delivery);
-	ArrayList<GoodsDTO> itemList(int id, int start, int end);
+	ArrayList<GoodsDTO> itemList(int id);
 	ArrayList<GoodsDTO> itemInfo(int id);
 	ArrayList<GoodsDTO> list();
 	int upd(int id, int category,String title,int price, int stock,int delivery,int discnt);

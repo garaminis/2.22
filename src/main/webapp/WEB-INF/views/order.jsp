@@ -8,6 +8,7 @@
     <meta charset="UTF-8">
     <title>홈</title>
     <link href="/css/theme.css" rel="stylesheet" type="text/css">
+    
     <style>
 	table {
 	    width: 100%;
@@ -19,7 +20,11 @@
 	    padding: 10px;
 	    text-align: center;
 	}
-}</style>
+	#mainContent {
+  		margin-top: 10px; /* 원하는 만큼의 상단 여백을 추가합니다. */
+	}
+	
+</style>
 <script src="https://code.jquery.com/jquery-latest.js"></script>
 <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script><!-- 다음카카오 주소API 스크립트 -->
 </head>
@@ -202,7 +207,6 @@
               <tr><td>배송비</td><td id="delPrice2"></td></tr>
               <tr><td>할인금액</td><td id="discount2" style="color:red">-0</td></tr>
             </table>
-          </div>
           <div>
             <button id="btnOrder">결제하기</button>
         </div>

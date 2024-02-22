@@ -5,11 +5,13 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link href="/css/thema.css" rel="stylesheet" type="text/css">
+<link href="/css/admin.css" rel="stylesheet" type="text/css">
 </head>
 <style>
- tr, td{
- border:1px;}
+ tr, td
+ {
+ 	border:1px;
+ }
 </style>
 <body>
 	  <nav id="nav" >

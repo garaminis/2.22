@@ -60,6 +60,7 @@ public class ShopController {
 		JSONArray ja = new JSONArray();
 		for(int i=0; i < data.size(); i++) {
 			JSONObject jo = new JSONObject();
+			jo.put("id",data.get(i).id);
 			jo.put("name",data.get(i).name);
 			jo.put("birth",data.get(i).birth);
 			jo.put("zipcode",data.get(i).zipcode);
@@ -99,6 +100,19 @@ public class ShopController {
 	}
 	@GetMapping("/myAbout")
 	public String myAbout(Model model) {
+	    int[] categories = {4, 5, 6, 7, 8};
+
+	    // 모든 카테고리에 대한 directQnAList 가져오기
+	    ArrayList<directQnADTO> DirectQnA = new ArrayList<>();
+	    for (int category : categories) {
+	        ArrayList<directQnADTO> directQnA = sdao.directQnAList(category);
+	        DirectQnA.addAll(directQnA);
+	    }
+	    model.addAttribute("directQnAlist", DirectQnA);     
+	    return "myAbout";
+	}
+	@GetMapping("/myQna")
+	public String myQna(Model model) {
 	    int[] categories = {4, 5, 6, 7, 8};
 
 	    // 모든 카테고리에 대한 directQnAList 가져오기

@@ -9,87 +9,22 @@
 <link href="/css/theme.css" rel="stylesheet" type="text/css">
 
 <style>
-	main {
-	  margin: 20px;
-	}
 	
-	.middle_top_title {
-	  font-size: 24px;
-	  color: #333;
-	}
-	
-	.middle_top_hr {
-	  border: 1px solid #333;
-	  margin-bottom: 20px;
-	}
-	
-	.announcement {
-	  margin-bottom: 10px;
-	  padding: 10px;
-	  background-color: #f9f9f9;
-	  border: 1px solid #ccc;
-	}
-	
-	#data_write {
-	  display: none;
-	}
-	
-	button {
-	  padding: 10px 20px;
-	  background-color: #333;
-	  color: white;
-	  border: none;
-	  cursor: pointer;
-	  margin-right: 10px;
-	}
-	
-	button:hover {
-	  background-color: #555;
-	}
-	.announcement label {
-	    display: block;
-	    font-weight: bold;
-	    margin-bottom: 5px;
-	}
-	.announcement input[type="text"],
-	.announcement textarea {
-	    width: 100%;
-	    padding: 10px;
-	    margin-bottom: 15px;
-	    border: 1px solid #ccc;
-	    border-radius: 4px;
-	    box-sizing: border-box;
-	}
-	
-	.announcement textarea {
-	    min-height: 150px;
-	    resize: vertical;
-	}
-	
-	.announcement button {
-	    background-color: black;
-	    color: #fff;
-	    border: none;
-	    border-radius: 4px;
-	    padding: 10px 20px;
-	    cursor: pointer;
-	    font-size: 16px;
-	}
-	
-	.announcement button:hover {
-	    background-color: #0056b3;
-	}
-		.announcement {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 10px;
-  padding: 10px;
-  border: 1px solid #ccc;
+.middle_top_hr {
+  margin-bottom: 20px;
 }
 
-/* Adjust spacing between different parts */
-.announcement span {
-  ma
+#data_write{
+  display: none;
+}
+.cid {
+  display: none;
+}
+.announcement { 
+  margin-bottom: 10px;
+}
+
+
 </style>
 </head>
 
@@ -117,7 +52,7 @@
   </div>
   </div>
 
-  <div class="announcement" id='data_write' style="display: none;"> 
+  <div class="announcement" id='data_write' > 
       <input type="text" id="uniq" value="${directQnA.id}" > 
       <input type="text" id="category" value="${directQnA.category}" style="display: none;" > 
       <label>제목</label><input type="text" id="title" value="${directQnA.title}" >
@@ -126,18 +61,17 @@
 
 
   <% if (admin!=null || id !=null) { %>
-	<input id="comment_id"  >
+	<input id="comment_id"  class="cid">
 	<label>답변</label><textarea id="comment"></textarea>
 	<input type="text" id="Qwriter" value=<%=id%> readonly>
 	<select id="answerstate" required="required">
     <option value="" selected disabled hidden>답변 상태를 선택해주세요.</option>
     </select>
 <% } else if(admin==null) { %> 
-	
-	<input id="comment_id"  >
+	<input id="comment_id" class="cid" >
 	<label>답변</label><textarea id="comment" readonly></textarea>
 <% }  %> 
-
+<br><br>
       <c:if test="${sessionScope.id != null and sessionScope.id==directQnA.writer}">  
           <button id="btnbModify" >수정하기</button>
           <button id="btnbClear" >취소하기</button>
@@ -355,11 +289,6 @@ function commentLoad(clickedElement) {
 $('.announcement').click(function() {
     commentLoad(this);
 });
-
-
-
-
-
 
 
 </script>

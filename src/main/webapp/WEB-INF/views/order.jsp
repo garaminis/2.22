@@ -21,8 +21,33 @@
 	    text-align: center;
 	}
 	#mainContent {
-  		margin-top: 10px; /* 원하는 만큼의 상단 여백을 추가합니다. */
+  		 display: flex; 
 	}
+	.sOrder{
+	width: 80%;
+	margin-right: 20px;
+	margin: 100px 20px;
+
+	}
+	.sOrder2 {
+    	float:left;
+    	width: 60%;
+    	height: 100%;
+    	margin-right: 20px;
+    	margin: 20px 20px;
+   }
+   .sOrder3{
+   		float:left;
+    	width: 30%;
+    	height: 100%;
+    	margin-right: 20px;
+    	margin: 20px 20px;	
+   }
+   .sOrder2_d{
+   		margin: 20px 20px;
+   }
+
+	
 	
 </style>
 <script src="https://code.jquery.com/jquery-latest.js"></script>
@@ -48,8 +73,8 @@
           <h1 class="middle_top_title">주문/결제</h1>
           <hr class="middle_top_hr">
         </div>
-        <div style="width: 80%; margin: 0 auto;"> <!--총 정보를 감싼 DIV-->
-          <div style="float:left; width: 100%;height: 100%;">
+        <div class='sOrder'> <!--총 정보를 감싼 DIV-->
+          <div >
           <h2>1. 주문상품 정보</h2>
      <table>
        <thead>
@@ -125,8 +150,8 @@
               </tbody>
             </table>
           </div>
-          <div style="float:left; width: 60%;height: 100%;"> <!--구매자 정보,배송지 정보,결제정보 DIV-->
-            <div><!--구매자 정보DIV-->
+          <div class='sOrder2'> <!--구매자 정보,배송지 정보,결제정보 DIV-->
+            <div  class='sOrder2_d'><!--구매자 정보DIV-->
               <h2>2. 구매자 정보</h2>
               <table>
                 <tr>
@@ -153,7 +178,7 @@
 			     </tr>
               </table>
             </div>
-            <div><!--배송지 정보DIV-->
+            <div  class='sOrder2_d'><!--배송지 정보DIV-->
               <h2>3. 배송지 정보</h2>
               <h3><input type="checkbox" class="sameOrder">주문자와 동일</h3>
               <table>
@@ -181,7 +206,7 @@
                 </tr>
               </table>
             </div>
-            <div><!--결제 정보 DIV-->
+            <div  class='sOrder2_d'><!--결제 정보 DIV-->
               <h2>4. 결제정보</h2>
               <table>
                 <tr>
@@ -197,10 +222,10 @@
               </table>
             </div>
           </div>
-          <div style="float:right; width: 30%;height: 100%; position : relative;">
-          <div><!--주문목록 총정보DIV--><!--주문목록 테이블 DIV-->
+          <div class='sOrder3' >
+          <div  ><!--주문목록 총정보DIV--><!--주문목록 테이블 DIV-->
             <h2>최종결제금액</h2>
-            <table>
+            <table >
               <tr><td colspan=2>최종결제금액</td></tr>
               <tr><td colspan=2 id="final"></td></tr>
               <tr><td>상품가격</td><td id="goodsPrice2"></td></tr>

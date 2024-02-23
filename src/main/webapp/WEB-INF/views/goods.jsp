@@ -30,12 +30,75 @@
         scroll-margin-top: 120px;
     }/*버튼누르고 스크롤 내려갔을때 상단의 공백*/
     
-tr,td {
-	border: 1px solid black;
-}
-table {
-	border-collapse:collapse; margin: auto;
-}
+    
+    
+    
+	/* 테이블 셀과 테두리 스타일 */
+	tr, td {
+	    border: 1px solid #ccc;
+	    padding: 10px;
+	    text-align: center;
+	    font-size:20px
+	}
+	
+	/* 테이블 테두리 스타일 및 가운데 정렬 */
+	table {
+	    border-collapse: collapse;
+	    margin: auto;
+	}
+	
+	/* 이미지 상자 */
+	.img-box {
+	    display: inline-block;
+	    vertical-align: top; /* 이미지 상단 정렬 */
+	    margin-right: 20px; /* 오른쪽 여백 추가 */
+	}
+	
+	/* 주문 폼 */
+	.doOrder {
+	    display: inline-block;
+	    vertical-align: top; /* 폼 상단 정렬 */
+	    margin-left: 20px; /* 왼쪽 여백 추가 */
+	    margin-top: 50px; /* 상단 여백 추가 */
+	}
+	
+	/* 장바구니 담기, 주문하기 버튼 */
+	#addCart, #directOrder {
+	    background-color: peru;/* 버튼 배경색 */
+	    color: #ffffff; /* 글자색 */
+	    border: none;
+	    border-radius: 4px;
+	    cursor: pointer;
+	    font-family: 'YeongdeokSea'; /* 글꼴 */
+	}
+	
+	/* 수량 조절 버튼 */
+	.int {
+	    background-color: peru; /* 버튼 배경색 */
+	    color: #ffffff; /* 글자색 */
+	    border: none;
+	    border-radius: 4px;
+	    cursor: pointer;
+	    font-family: 'YeongdeokSea'; /* 글꼴 */
+	    width: 80px;
+	    height: 30px;
+	    font-size: 30px;
+	    margin-top: 5px; /* 상단 여백 */
+	    display: inline-block;
+	}
+	
+	/* 결과 값 가운데 정렬 */
+	#result {
+	    text-align: center;
+	    width: 80px;
+	    height: 30px;
+	    font-size: 30px;
+	    margin-top: 5px; /* 상단 여백 */
+	    display: inline-block;
+	}
+
+ 
+  	
     
 </style>
 <body>
@@ -65,7 +128,7 @@ table {
             <img class="S_img5" onmouseover="onIMG();" onmouseout="offIMG();"style="width: 40px;" src="/img/coffee/${itemInfo[0].img5}" alt="">
           </div>
         </div>
-        <form method='get' action="/order" id="goOrder">
+        <form method='get' action="/order" id="goOrder" class='doOrder'>
         <input type="hidden" style="display:none" id="goodsNumber" name="goodsNumber" value="${itemInfo[0].id}">
          <input type="hidden" style="display:none" id="gPrice" name="goodsPrice" value="">
         <div style="display: inline-block;">
@@ -83,8 +146,8 @@ table {
               <td>수량</td>
               <td>
                 <input type="text" id="result" name="result" readonly value="1" style="text-align: right;width: 80px;height: 30px;font-size: 30px;">
-                <input type="button" style="width: 40px;height: 30px;" onclick='count("plus")' value="+">
-                <input type="button" style="width: 40px;height: 30px;" onclick='count("minus")' value="-">
+                <input type="button" style="width: 40px;height: 30px;" onclick='count("plus")' value="+" class="int">
+                <input type="button" style="width: 40px;height: 30px;" onclick='count("minus")' value="-"  class="int">
               </td>
             </tr>
           </table>

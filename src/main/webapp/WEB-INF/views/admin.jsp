@@ -86,7 +86,7 @@ function getGoodsList(){ //테이블가져오는 함수
 				let disprice = price*(1 - discnt / 100)
 				let to10 = Math.round(disprice / 10) * 10;
 				let str = '<tr><td>'+ob['id']+'</td><td>'+ob['category']+'</td><td>'+
-				'<img style="width:120px" src="'+ob['img1']+'">'+
+				'<img style="width:120px" src="img/coffee/'+ob['img1']+'">'+
 				'</td><td>'+ob['title']+'</td><td>'+ob['price']+'</td><td>'+ob['discnt']+'%'+'</td><td>'+
 				to10+'</td><td>'+ob['stock']+'</td><td>'+ob['delpay']+'</td><td>'+'<button class="siuu" value="'+ob['id']+'">수정</button>/'+
 				'<button class="sack" value="'+ob['id']+'">삭제</button>'+'</td></tr>'

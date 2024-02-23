@@ -67,7 +67,7 @@
 	}
 	button.doOrder {
 	   padding: 13px 30px;
-	   background-color: rgb(233, 213, 189);
+	   background-color: peru;
 	   color: #ffffff;
 	   border: none;
 	   border-radius: 4px;
@@ -75,10 +75,11 @@
 	   font-family: 'YeongdeokSea';
 	   margin-right: 10px;
 	   width: 150px;
+	   font-size:15px;
 	}
 
 	button.doOrder:hover {
-    	background-color: peru;
+    	background-color: #a58e7f;
     	width: 150px; 
 	}
 	form button {

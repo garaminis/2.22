@@ -115,15 +115,21 @@ nav {
 #doSerch {
     width: 100px;
     height: 30px;
-    background-color: burlywood;
+    background-color: peru;
     color: #fff;
-    font-size: 90%;
+    font-size: 100%;
     border: none;
     border-radius: 5px;
     margin-left: 10px;
+    margin-right: 20px;
     cursor: pointer;
     transition: background-color 0.2s;
     font-family: 'YeongdeokSea';
+    display: flex;
+    align-items: center; /* 수직 중앙 정렬 */
+    justify-content: center; /* 수평 중앙 정렬 */
+  
+
 }
 
 #doSerch:hover {
@@ -205,7 +211,7 @@ footer {
 }
  
 footer a {
-    color: #fff; /* 링크 색상 */
+    color: rgb(139, 90, 26); /* 링크 색상 */
     text-decoration: none; /* 밑줄 제거 */
     margin:  90px; /* 링크 사이 여백 */
 }
@@ -216,7 +222,7 @@ footer a:hover {
 /* 버튼 스타일 */
 button {
     padding: 13px 30px;
-    background-color: rgb(233, 213, 189);
+    background-color: rgb(180, 110, 25);
     color: #ffffff;
     border: none;
     border-radius: 4px;

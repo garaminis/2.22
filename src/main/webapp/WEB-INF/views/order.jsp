@@ -46,6 +46,16 @@
    .sOrder2_d{
    		margin: 20px 20px;
    }
+   #zipcode2{
+   		 width: 108px;
+   }
+   #ADRshow1{
+   		padding: 10px 10px;
+	 	width:70px;
+   }
+   .sPayment{
+   		 margin-top: 15px;
+   }
 
 	
 	
@@ -92,7 +102,7 @@
         <input type="hidden" style="display:none" class="cartId" value="${item.cart_id}">
            <tr >
                <td rowspan="2">
-                   <img src="/img/${item.img1}" alt="magic keyboard" style="width:75px;">
+                   <img src="/img/coffee/${item.img1}" alt="magic keyboard" style="width:75px;">
                </td>
                <td>
                    <p>${item.title}</p>
@@ -188,7 +198,7 @@
                 </tr>
 			     <tr>
 			       <td rowspan="3">배송지 </td>
-			       <td> <input type="number" id="zipcode2" readonly>&nbsp;<button id=ADRshow1>주소검색</button></td>
+			       <td> <input type="number" id="zipcode2" readonly>&nbsp<button id=ADRshow1>주소검색</button></td>
 			     </tr>
 			     <tr>
 			       <td><input type="text" id="adress2" readonly></td>
@@ -232,7 +242,7 @@
               <tr><td>배송비</td><td id="delPrice2"></td></tr>
               <tr><td>할인금액</td><td id="discount2" style="color:red">-0</td></tr>
             </table>
-          <div>
+          <div class='sPayment'>
             <button id="btnOrder">결제하기</button>
         </div>
         </div>
